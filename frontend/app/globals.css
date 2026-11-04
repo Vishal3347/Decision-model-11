@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg:#f6f7f9; --card:#fff; --ink:#0f172a; --mut:#64748b; --line:#e2e8f0; --acc:#4f46e5; --accsoft:#eef2ff; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0b0f17; --card:#121826; --ink:#e5e9f0; --mut:#8b97ab; --line:#1f2937; --acc:#818cf8; --accsoft:#1e2142; }
+}
+body { background: var(--bg); color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.mut { color: var(--mut); }
+.line { border-color: var(--line); }
+.btn { display:inline-flex; align-items:center; gap:.4rem; border-radius:8px; padding:.45rem .85rem; font-size:.85rem; font-weight:600; border:1px solid var(--line); background:var(--card); cursor:pointer; transition: background .15s; }
+.btn:hover { background: var(--accsoft); }
+.btn:disabled { opacity:.5; cursor:not-allowed; }
+.btn-pri { background: var(--acc); color:#fff; border-color: var(--acc); }
+.btn-pri:hover { background: var(--acc); filter: brightness(1.1); }
+.btn-danger { color:#dc2626; }
+.input { border:1px solid var(--line); background:var(--card); border-radius:8px; padding:.4rem .6rem; font-size:.85rem; color:var(--ink); width:100%; }
+@keyframes fadein { from { opacity:0; transform: translateY(3px);} to { opacity:1; transform:none; } }
+.fade { animation: fadein .25s ease; }
